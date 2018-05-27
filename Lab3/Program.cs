@@ -12,9 +12,9 @@ namespace Lab3
         {
             Clients newap = new Clients("Игорь", "Крюков", "Александрович");
 
-            newap.showClients();
+            newap.ShowInfo();
             Staff newup = new Staff("Олег", "Молчанов", "Алексеевич", "экскурсовод", "свободен");
-            newup.ShowStaff();
+            newup.ShowInfo();
             Console.ReadKey();
         }
     }

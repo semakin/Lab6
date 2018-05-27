@@ -6,24 +6,24 @@ using System.Threading.Tasks;
 
 namespace Lab3
 {
-    class Staff // Класс персонал
+    class Staff : Human // Класс персонал
     {
-        public string name;
-        public string Surname;
+        
         public string middlename;
         public string position;
         public string status;
-        public Staff(string name, string Surname, string middlename, string position, string status)
+        public Staff(string name, string Surname, string middlename, string position, string status) : base(name, Surname) 
         {
-            this.name = name;
-            this.Surname = Surname;
+            
             this.middlename = middlename;
             this.position = position;
             this.status = status;
         }
-        public void ShowStaff()
+        public override void ShowInfo()
         {
-            Console.WriteLine("Сотрудник: \n" + name + "\n" + Surname + "\n" + middlename + "\n" + position + "\n" + status + "\n");
+            Console.WriteLine("Сотрудник:");
+            base.ShowInfo();
+            Console.WriteLine( middlename + "\n" + position + "\n" + status);
         }
     }
 }

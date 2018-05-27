@@ -6,21 +6,21 @@ using System.Threading.Tasks;
 
 namespace Lab3
 {
-    class Clients // Класс клиенты
+    class Clients : Human // Класс клиенты
     {
-        public string name;
-        public string surname;
+        
         public string middlename;
         
-        public Clients(string name, string surname, string middlename)
+        public Clients(string name, string surname, string middlename) : base(name, surname)
         {
-            this.name = name;
-            this.surname = surname;
+            
             this.middlename = middlename;
         }
-        public void showClients()
+        public override void ShowInfo()
         {
-            Console.WriteLine("Клиент: \n" + name + "\n" + surname + "\n" + middlename + "\n");
+            Console.WriteLine("Клиент:");
+            base.ShowInfo();
+            Console.WriteLine( "\n" + middlename);
         }
     }
 }

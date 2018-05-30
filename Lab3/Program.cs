@@ -15,6 +15,10 @@ namespace Lab3
             newap.ShowInfo();
             Staff newup = new Staff("Олег", "Молчанов", "Алексеевич", "экскурсовод", "свободен");
             newup.ShowInfo();
+
+            Route obj = new Route();
+
+            obj.RoutHell();
             Console.ReadKey();
         }
     }

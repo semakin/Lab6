@@ -6,19 +6,17 @@ using System.Threading.Tasks;
 
 namespace Lab3
 {
-    class Human // Класс человек
+
+    abstract class Human // Абстрактный класс человек
     {
         public string name;
         public string surname;
-        public Human (string name, string surname)
+        public Human(string name, string surname)
         {
             this.name = name;
             this.surname = surname;
         }
-        public virtual void ShowInfo()
-        {
-            Console.WriteLine(name + "\n" + surname);
-        }
-       
+        public abstract void ShowInfo();
+
     }
 }

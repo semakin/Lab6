@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab3
 {
-    class Staff : Human // Класс персонал
+    class Staff : Human // Класс наследник персонал
     {
         
         public string middlename;
@@ -21,9 +21,7 @@ namespace Lab3
         }
         public override void ShowInfo()
         {
-            Console.WriteLine("Сотрудник:");
-            base.ShowInfo();
-            Console.WriteLine( middlename + "\n" + position + "\n" + status);
+            Console.WriteLine("Сотрудник: \n" + name + "\n" + surname + "\n" + middlename + "\n" + position + "\n" + status);
         }
     }
 }
